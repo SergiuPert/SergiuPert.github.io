@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sergiu Pert | Unity Game Developer</title>
+  <meta name="description" content="Unity game developer with 5+ years of experience. Shipped mobile free-to-play games at SuperPlay and PocketFun, and built Evilos, a 2D tower defense, on my own.">
+  <meta name="theme-color" content="#0c0a0b">
+  <link rel="canonical" href="https://sergiupert.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sergiupert.github.io/">
+  <meta property="og:title" content="Sergiu Pert | Unity Game Developer">
+  <meta property="og:description" content="Shipped mobile free-to-play games at SuperPlay and PocketFun, and built Evilos, a 2D tower defense, on my own.">
+  <meta property="og:image" content="https://sergiupert.github.io/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="font" href="assets/fonts/poppins-latin-700-normal.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="image" href="assets/img/hero-wide.webp">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sergiu Pert",
+    "jobTitle": "Unity Game Developer",
+    "url": "https://sergiupert.github.io/",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bucharest", "addressCountry": "RO" },
+    "sameAs": ["https://www.linkedin.com/in/sergiu-pert-594817192/"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#top">Sergiu Pert</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#evilos">Evilos</a>
+      <a href="#work">Studio work</a>
+      <a href="#build">How I build</a>
+      <a href="#skills">Skills</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn btn--ghost btn--small" href="assets/Sergiu-Pert-CV.pdf" download>Download CV</a>
+  </header>
+
+  <section class="hero" id="top">
+    <img class="hero__art" src="assets/img/hero-wide.webp" alt="" width="2400" height="863" fetchpriority="high">
+    <canvas class="hero__embers" id="embers" aria-hidden="true"></canvas>
+    <div class="hero__shade"></div>
+    <div class="hero__inner">
+      <div class="hero__col">
+        <p class="eyebrow">Unity Game Developer &middot; Bucharest</p>
+        <h1 class="hero__name">Sergiu<br>Pert</h1>
+        <p class="hero__lead">I make games in Unity and C#. I've shipped mobile free-to-play titles at SuperPlay and PocketFun, and I built Evilos, my 2D tower defense, on my own.</p>
+        <div class="cta">
+          <a class="btn btn--fire" href="#evilos">See my work</a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+    <dl class="stats">
+      <div><dt>5+</dt><dd>years of experience</dd></div>
+      <div><dt>5</dt><dd>games shipped</dd></div>
+      <div><dt>30,000</dt><dd>lines of C# in Evilos</dd></div>
+      <div><dt>12</dt><dd>languages localized</dd></div>
+    </dl>
+  </section>
+
+  <main id="main">
+
+    <!-- EVILOS -->
+    <section class="section" id="evilos">
+      <div class="wrap">
+        <div class="feature reveal">
+          <div class="feature__text">
+            <p class="label">Featured project &middot; built solo</p>
+            <img class="feature__logo" src="assets/img/logo-evilos.webp" alt="Evilos" width="760" height="310" loading="lazy">
+            <h2 class="h2">You are the final boss.</h2>
+            <p class="lede">A 2D tower defense where the player is the evil overlord, defending against waves of heroes across 10 acts. I designed and built the entire game: gameplay, enemy AI, UI/UX, economy and LiveOps.</p>
+            <ul class="facts">
+              <li><b>100</b> levels</li>
+              <li><b>24</b> evolvable weapons and spells</li>
+              <li><b>12</b> languages</li>
+              <li><b>Unity 6.3</b> and C#</li>
+            </ul>
+            <div class="cta">
+              <a class="btn btn--fire" href="https://store.steampowered.com/app/5035770/" target="_blank" rel="noopener">Free demo on Steam</a>
+              <a class="btn btn--ghost" href="https://play.google.com/store/apps/details?id=com.BOI.Evilos" target="_blank" rel="noopener">Get it on Google Play</a>
+            </div>
+            <p class="status"><span class="dot"></span>Live on Google Play. Steam release on 14 Dec 2026.</p>
+          </div>
+          <div class="trailer" id="trailer" data-yt="-QNmPf43Bdo">
+            <button type="button" class="trailer__btn" aria-label="Play the Evilos trailer">
+              <img src="assets/img/trailer-poster.webp" alt="" width="1280" height="720" loading="lazy">
+              <span class="trailer__play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the trailer</span>
+            </button>
+          </div>
+        </div>
+
+        <ul class="gallery reveal" id="gallery">
+          <li class="gallery__big"><a href="assets/img/evilos-1.webp" data-full><img src="assets/img/evilos-1-sm.webp" alt="Armoured heroes marching on the sorcerer's magic shield in a burning hall" width="960" height="540" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-2.webp" data-full><img src="assets/img/evilos-2-sm.webp" alt="A golden explosion and damage numbers in a forest level" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-3.webp" data-full><img src="assets/img/evilos-3-sm.webp" alt="Purple lightning tearing through ghosts in a blue hall" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-4.webp" data-full><img src="assets/img/evilos-4-sm.webp" alt="A frost blast filling the screen in a village level" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-5.webp" data-full><img src="assets/img/evilos-5-sm.webp" alt="A burning beam and a black hole spell against heroes at night" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-6.webp" data-full><img src="assets/img/evilos-6-sm.webp" alt="A purple vortex spell in a dark hall" width="720" height="405" loading="lazy"></a></li>
+        </ul>
+
+        <div class="arsenal">
+          <div class="reveal">
+            <h3 class="h3">An arsenal that evolves</h3>
+            <p class="muted">10 magic guns and 14 spells. Upgrade them, then evolve them: Hellfire becomes Inferno, Meteor becomes Void Comet, Acid Blob becomes Lava Blob.</p>
+          </div>
+          <div class="clips reveal">
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/img/clip-lava.webp" data-src="assets/video/clip-lava.mp4" width="854" height="480" aria-label="Lava Blob spell in action"></video><figcaption>Lava Blob</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/img/clip-frost.webp" data-src="assets/video/clip-frost.mp4" width="854" height="480" aria-label="Frost Nova spell in action"></video><figcaption>Frost Nova</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/img/clip-lightning.webp" data-src="assets/video/clip-lightning.mp4" width="854" height="480" aria-label="Forked Lightning spell in action"></video><figcaption>Forked Lightning</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/img/clip-meteor.webp" data-src="assets/video/clip-meteor.mp4" width="854" height="480" aria-label="Meteor Shower spell in action"></video><figcaption>Meteor Shower</figcaption></figure>
+          </div>
+          <ul class="ingame reveal">
+            <li><b>Elite minions</b><span>Summon defenders to stand between you and the mob.</span></li>
+            <li><b>10 acts, 100 levels</b><span>Every act ends in a boss fight, and Hard mode waits after that.</span></li>
+            <li><b>Daily loop</b><span>Daily quests, daily rewards and 75 achievements.</span></li>
+          </ul>
+        </div>
+
+        <div class="under">
+          <div class="reveal">
+            <h3 class="h3">Under the hood</h3>
+            <p class="muted">About 30,000 lines of C#. A few of the systems behind it.</p>
+          </div>
+          <div class="specs">
+            <article class="spec spec--wide reveal">
+              <p class="spec__key">514 MB &rarr; 151 MB</p>
+              <div class="bars" aria-hidden="true">
+                <div class="bar"><span class="bar__fill bar__fill--before"></span><em>Before</em></div>
+                <div class="bar"><span class="bar__fill bar__fill--after"></span><em>After</em></div>
+              </div>
+              <p>Cut the game's Android size by streaming videos, cutscenes and music from a Cloudflare CDN via Addressables, subsetting CJK fonts and capping textures.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">3-tier fallback</p>
+              <ol class="tiers" aria-label="Fallback order">
+                <li>Remote Config</li><li>Local cache</li><li>Embedded defaults</li>
+              </ol>
+              <p>Live-tunable balance on UGS Remote Config, so weapons, spells, enemies and difficulty can be tuned without a client update.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">16 IAPs, 173 regions</p>
+              <p>The full free-to-play stack: Unity Purchasing, LevelPlay rewarded and interstitial ads, a Tapjoy offerwall and Google UMP consent, with regional prices from a World Bank PPP model.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">Hidden difficulty</p>
+              <p>An adaptive system: a cloud-synced per-player rating, fed by defence HP, headshot ratio and deaths, scales only stats with no on-screen readout, with a Remote Config kill switch.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">Cloud save</p>
+              <p>Unity Authentication and Cloud Save, linked to Google Play Games, Apple Game Center and Steam, with conflict-safe progress merging for offline play.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">Mobile and Steam, one codebase</p>
+              <p>The Steam version lives on the same branch as mobile, with one policy layer for platform differences and PC saves keyed by Steam ID, so they load offline and stay separate per account.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">12 languages</p>
+              <p>Unity Localization, including Chinese, Japanese and Korean, with per-language fonts and automated glyph and text-overflow checks.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO WORK -->
+    <section class="section section--alt" id="work">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="label">Studio work</p>
+          <h2 class="h2">What I built at studios</h2>
+        </div>
+
+        <article class="studio reveal">
+          <header class="studio__head">
+            <img class="icon" src="assets/img/icon-domino.webp" alt="Domino Dreams icon" width="240" height="240" loading="lazy">
+            <div>
+              <h3 class="h3">Domino Dreams</h3>
+              <p class="studio__role">SuperPlay &middot; Mid Unity Developer, MTX department &middot; Jul 2025 &ndash; Jun 2026</p>
+              <p class="links"><a href="https://play.google.com/store/apps/details?id=com.screenshake.dominodreams" target="_blank" rel="noopener">Play Store</a><a href="https://apps.apple.com/app/domino-dreams/id6444043291" target="_blank" rel="noopener">App Store</a></p>
+            </div>
+          </header>
+          <p class="muted">A story-driven domino puzzle adventure where players solve domino-matching levels to progress through a narrative and rebuild a world.</p>
+          <ul class="ticks ticks--two">
+            <li>Built the pet selection system, a monetized feature that drives player engagement, and integrated it into the start-of-level menu</li>
+            <li>Expanded it with collectible pet skins, adding a new monetization and engagement driver</li>
+            <li>Implemented the visuals for a new X5 multiplier game mode</li>
+            <li>Designed a simpler, reusable badge system that can be used in any MTX game event</li>
+            <li>Consolidated separate event task-tracking systems (Dream Pass, Swamp Escape) into a single reusable one, reducing development time for future task-based events</li>
+          </ul>
+        </article>
+
+        <p class="company reveal">PocketFun <span>&middot; Unity Game Developer &middot; Apr 2023 &ndash; Jun 2025</span></p>
+        <div class="cards">
+          <article class="card reveal">
+            <img class="icon" src="assets/img/icon-pichoo.webp" alt="Pichoo's World icon" width="240" height="240" loading="lazy">
+            <h3 class="h4">Pichoo's World</h3>
+            <p class="card__sub">Client project, finished and released on Android and iOS</p>
+            <ul class="ticks">
+              <li>Implemented 40% of the minigames and UI for the game</li>
+              <li>Implemented Unity's Addressables system to load only the necessary game files, reducing the game's memory load by 70%</li>
+            </ul>
+            <p class="links"><a href="https://apps.apple.com/app/pichoos-world-learning-games/id6478774026" target="_blank" rel="noopener">App Store</a></p>
+          </article>
+          <article class="card reveal">
+            <img class="icon" src="assets/img/icon-dots.webp" alt="Dots Connect Zen Garden icon" width="240" height="240" loading="lazy">
+            <h3 class="h4">Dots Connect Zen Garden</h3>
+            <p class="card__sub">Our own project, released on Android and iOS</p>
+            <ul class="ticks">
+              <li>Implemented all of the game's lighting, VFX and post-processing</li>
+              <li>Built an adaptive quality system that detects the frame rate on the device and automatically optimizes or culls effects until the game reaches 60 fps, tested on a 4-year-old phone</li>
+              <li>Created the koi fish pond's particle systems and the logic for unlocking the props inside it</li>
+              <li>Implemented mobile ads through Unity LevelPlay</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <img class="icon" src="assets/img/icon-recycle.webp" alt="Recycle Champions icon" width="240" height="240" loading="lazy">
+            <h3 class="h4">Recycle Champions</h3>
+            <p class="card__sub">Client project, MVP released on Android and iOS</p>
+            <ul class="ticks">
+              <li>Implemented a timed-rewards and idle resource generation system, writing the server-side functions (C#, .NET 6 on Unity Cloud Code) that calculated generation authoritatively for tamper-resistant results</li>
+              <li>Built a map feature with periodically appearing collectible resource bubbles, with server-side validation for the rewards</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW I BUILD -->
+    <section class="section" id="build">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="label">How I build</p>
+          <h2 class="h2">Faster with AI.<br>Every change still reviewed.</h2>
+          <p class="lede">I build with Claude Code as an agentic coding partner, under a curated rules setup, and I review every change and check it with on-device tests. That's how I run Evilos and how I built Game Marketing Hub.</p>
+        </div>
+        <ol class="flow reveal">
+          <li><b>Rules first</b><span>A curated rules file and 10 context docs keep the agent on the project's standards.</span></li>
+          <li><b>Build</b><span>Claude Code works through the task as a coding partner.</span></li>
+          <li><b>Review</b><span>I review every change.</span></li>
+          <li><b>Test</b><span>About 60 on-device regression tests check it, with real taps and save snapshots.</span></li>
+          <li><b>Approve</b><span>Live deploys and store writes wait for my approval.</span></li>
+        </ol>
+        <div class="split">
+          <article class="card card--tool reveal">
+            <p class="label label--quiet">AI-built tooling for Evilos</p>
+            <h3 class="h4">Store automation</h3>
+            <p class="muted">Dry-run-first PowerShell automation on the Google Play and App Store Connect APIs: regional pricing for 16 IAPs, IAP listings in 14 locales, and 75 achievements localized into 12 languages.</p>
+          </article>
+          <article class="card card--tool reveal">
+            <p class="label label--quiet">My own tool &middot; 2026</p>
+            <h3 class="h4">Game Marketing Hub</h3>
+            <p class="muted">A local-first creator-outreach platform in Node, TypeScript, SQLite and React, specified with Claude Code and checked against real data, with about 610 automated tests. It finds YouTube creators who cover similar games and scores them for fit (18,000+ so far).</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section--alt" id="skills">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="label">Skills</p>
+          <h2 class="h2">What I work with</h2>
+        </div>
+        <div class="skills reveal">
+          <div><h3>Unity &amp; gameplay</h3><ul><li>Unity Engine</li><li>C#</li><li>Gameplay Programming</li><li>Enemy AI &amp; Difficulty Systems</li><li>UI/UX</li><li>Animation/VFX</li></ul></div>
+          <div><h3>LiveOps &amp; monetization</h3><ul><li>Remote Config</li><li>Addressables &amp; CDN</li><li>Unity Gaming Services</li><li>Cloud Save</li><li>Free-to-Play Monetization</li><li>IAP &amp; Ads</li></ul></div>
+          <div><h3>Performance &amp; platforms</h3><ul><li>Performance &amp; Memory Optimization</li><li>Android</li><li>iOS</li><li>Steam / PC</li><li>Localization</li></ul></div>
+          <div><h3>C# / .NET</h3><ul><li>Serverless C# (.NET 6, Cloud Code)</li><li>ASP.NET Core</li><li>EF Core</li><li>SQL Server</li></ul></div>
+          <div><h3>AI &amp; tooling</h3><ul><li>AI-Assisted Development (Claude Code)</li><li>Agent Workflows</li><li>Automation &amp; Editor Tooling</li><li>Store APIs</li><li>Node, TypeScript, React (with Claude Code)</li></ul></div>
+          <div><h3>Version control</h3><ul><li>Git</li><li>Plastic SCM</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap about">
+        <div class="about__photo reveal">
+          <img src="assets/img/portrait.webp" alt="Sergiu Pert" width="900" height="900" loading="lazy">
+        </div>
+        <div class="reveal">
+          <p class="label">About</p>
+          <h2 class="h2">Hi, I'm Sergiu.</h2>
+          <p class="lede">The thing that brings me the most satisfaction is seeing people enjoy my creations. I've shipped titles in-studio, for clients and solo, and I'm strongest in gameplay, LiveOps systems, IAP and ads, and performance.</p>
+          <p class="muted">I'm open to Unity and C#/.NET roles, full-time or contract, fully remote or hybrid in Bucharest.</p>
+          <ol class="path">
+            <li><time>2023 &ndash; now</time><div><b>Evilos</b><span>Independent Game Developer</span></div></li>
+            <li><time>Jul 2025 &ndash; Jun 2026</time><div><b>SuperPlay</b><span>Mid Unity Developer, MTX department</span></div></li>
+            <li><time>Apr 2023 &ndash; Jun 2025</time><div><b>PocketFun</b><span>Unity Game Developer</span></div></li>
+            <li><time>Sep 2021 &ndash; Sep 2022</time><div><b>Codecool</b><span>Full-Stack Developer Training Program, C# Track: team projects in ASP.NET Core, EF Core and SQL Server, and a four-day team game in Unity</span></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <img class="contact__art" src="assets/img/campaign.webp" alt="" width="2000" height="571" loading="lazy">
+      <div class="wrap contact__inner reveal">
+        <h2 class="contact__title">Looking for a Unity developer?</h2>
+        <p class="lede">Send me a message and I'll get back to you.</p>
+        <p class="contact__mail" data-email-text></p>
+        <div class="cta cta--center">
+          <a class="btn btn--fire" data-email href="https://www.linkedin.com/in/sergiu-pert-594817192/">Email me</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/sergiu-pert-594817192/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="assets/Sergiu-Pert-CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Sergiu Pert. Game names and artwork belong to their owners.</p>
+    <p>Built with Claude Code. No cookies, no tracking.</p>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
+    <button type="button" class="lightbox__close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Previous screenshot">&#8249;</button>
+    <img alt="">
+    <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Next screenshot">&#8250;</button>
+  </dialog>
+
+  <script src="js/site.js" defer></script>
+</body>
+</html>

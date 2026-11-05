@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sergiupert.github.io/sitemap.xml

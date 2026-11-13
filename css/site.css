@@ -268,3 +268,121 @@ html:not(.js) .bar__fill--after, .is-in .bar__fill--after { width: 23%; }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   .js .reveal { opacity: 1; transform: none; }
 }
+
+/* The Dead Parade (added 2026-11-12, local preview) */
+.dot--amber { background: var(--gold); box-shadow: 0 0 10px var(--gold); }
+.trailer--video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+.gallery--tdp { grid-template-columns: repeat(4, 1fr); }
+.gallery__wide { grid-column: span 2; }
+.clips--3 { grid-template-columns: repeat(3, 1fr); }
+.more { margin-top: 26px; }
+.more a { color: var(--gold); font-weight: 600; text-underline-offset: 3px; }
+.nav__links a[aria-current="page"] { color: var(--gold); }
+@media (max-width: 1180px) { .nav__links { gap: 18px; } .nav__links a { font-size: 0.84rem; } }
+.nav__links a { white-space: nowrap; }
+@media (max-width: 980px) { .nav__links { display: none; } .nav .btn { margin-left: auto; } }
+@media (max-width: 980px) { .gallery--tdp { grid-template-columns: repeat(2, 1fr); } .clips--3 { grid-template-columns: repeat(2, 1fr); } }
+
+/* Animation page */
+.page-hero { position: relative; overflow: hidden; padding: calc(var(--nav-h) + clamp(48px, 8vw, 96px)) 0 clamp(40px, 6vw, 72px); isolation: isolate; border-bottom: 1px solid var(--line); }
+.page-hero__art { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.page-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to right, rgba(12, 10, 11, 0.94) 0%, rgba(12, 10, 11, 0.8) 48%, rgba(12, 10, 11, 0.45) 100%), linear-gradient(to bottom, rgba(12, 10, 11, 0) 60%, var(--bg) 100%); }
+.page-hero h1 { max-width: 18ch; }
+.loops { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.loop { overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: var(--card); }
+.loop video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: #000; }
+.loop figcaption { position: static; padding: 14px 16px 16px; border-radius: 0; background: none; font-size: inherit; font-weight: 400; }
+.loop b, .study b { display: block; font-weight: 600; }
+.loop span { display: block; margin-top: 2px; color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
+.studies { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+.study { display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--card); }
+.study video { width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.study__text { display: flex; flex-direction: column; gap: 8px; flex: 1; padding: 18px 20px 20px; }
+.study__text p { color: var(--muted); font-size: 0.92rem; }
+.study__text .toggle { align-self: flex-start; margin-top: auto; }
+.toggle { min-height: 38px; padding: 0 16px; border: 1px solid var(--line-strong); border-radius: 999px; background: rgba(255, 255, 255, 0.03); color: var(--ink); font: inherit; font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: border-color 0.15s ease, background-color 0.15s ease; }
+.toggle:hover { border-color: var(--gold); }
+.toggle[aria-pressed="true"] { border-color: var(--ember); background: rgba(255, 107, 26, 0.14); color: var(--gold); }
+.note { max-width: 72ch; margin-top: 26px; padding: 16px 20px; border-left: 3px solid var(--ember); border-radius: 0 12px 12px 0; background: var(--card); }
+@media (max-width: 980px) { .loops { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .loops, .studies, .clips--3 { grid-template-columns: minmax(0, 1fr); } .gallery--tdp { gap: 8px; } }
+.feature__capsule { width: min(440px, 100%); margin-bottom: 22px; border-radius: 12px; box-shadow: 0 0 0 1px var(--line-strong), 0 22px 60px -22px rgba(255, 90, 20, 0.5); }
+
+/* Hero with both games, split like the Game Marketing Hub's banner (his note, 2026-11-12), logos larger */
+.hero--duo { --slant: 22vh; min-height: max(100svh, 760px); }
+.hero__duo { position: absolute; inset: 0; z-index: -3; }
+.duo { position: absolute; top: 0; bottom: 0; width: calc(50% + var(--slant) / 2); margin: 0; overflow: hidden; }
+.duo--evilos { left: 0; }
+.duo--parade { right: 0; clip-path: polygon(var(--slant) 0, 100% 0, 100% 100%, 0 100%); }
+.duo__art { width: 100%; height: 100%; max-width: none; object-fit: cover; transform: scaleX(-1); }
+.duo--evilos .duo__art { object-position: 45.5% 26%; filter: saturate(1.1) contrast(1.05); }
+.duo--parade .duo__art { object-position: 100% 38%; filter: saturate(1.05) contrast(1.05) brightness(0.86); }
+.duo__logo { position: absolute; left: 50%; top: calc(var(--nav-h) + 6vh); width: clamp(220px, 22vw, 440px); height: auto; transform: translateX(-50%); filter: drop-shadow(0 6px 18px #000); }
+.duo--evilos .duo__logo { margin-left: calc(var(--slant) / -4); }
+.duo--parade .duo__logo { width: clamp(200px, 19vw, 380px); margin-left: calc(var(--slant) / 4); }
+.hero__duo::after { content: ""; position: absolute; top: 0; bottom: 0; left: calc(50% - var(--slant) / 2); width: var(--slant); background: linear-gradient(to bottom right, transparent calc(50% - 1.5px), #fff1c9 50%, transparent calc(50% + 1.5px)); filter: drop-shadow(0 0 3px #ffb347) drop-shadow(0 0 8px #ff5a14); }
+.hero--duo .hero__shade { background: linear-gradient(to bottom, rgba(12, 10, 11, 0.5) 0%, rgba(12, 10, 11, 0) 16%, rgba(12, 10, 11, 0) 34%, rgba(12, 10, 11, 0.8) 56%, rgba(12, 10, 11, 0.95) 76%, var(--bg) 100%); }
+.hero--duo .hero__inner { justify-content: center; text-align: center; }
+.hero--duo .hero__col { align-items: center; width: min(820px, 100%); }
+.hero--duo .hero__name { font-size: clamp(3rem, min(7vw, 11vh), 5.6rem); }
+.hero--duo .hero__lead { max-width: 60ch; }
+.hero--duo .cta { justify-content: center; }
+@media (max-width: 860px) {
+  .hero--duo { --slant: 12svh; min-height: 100svh; }
+  .hero__duo { bottom: auto; height: 56svh; }
+  .duo__logo { top: calc(var(--nav-h) + 2svh); width: 38vw; }
+  .duo--parade .duo__logo { width: 32vw; }
+  .duo--parade .duo__art { object-position: 64% 30%; }
+  .hero--duo .hero__shade { background: linear-gradient(to bottom, rgba(12, 10, 11, 0.5) 0%, rgba(12, 10, 11, 0) 14%, rgba(12, 10, 11, 0.15) 26svh, rgba(12, 10, 11, 0.88) 42svh, var(--bg) 56svh); }
+}
+
+/* The Dead Parade's intro: capsule and trailer side by side, tops aligned */
+.feature--tdp { align-items: start; margin-top: 4px; }
+.feature--tdp .feature__capsule { width: 100%; max-width: 520px; }
+.feature__media .facts { margin-top: 22px; }
+.feature__media .cta { margin-top: 22px; }
+
+/* Uniform 16:9 rows: the wide tile takes the row height of its neighbours instead of setting it */
+.gallery--tdp li { aspect-ratio: 16 / 9; }
+.gallery--tdp .gallery__big { aspect-ratio: auto; }
+.gallery--tdp .gallery__wide { position: relative; aspect-ratio: auto; }
+.gallery--tdp .gallery__wide a { position: absolute; inset: 0; }
+@media (max-width: 980px) { .gallery--tdp .gallery__wide { aspect-ratio: 16 / 9; } }
+
+/* Fourth pass */
+.feature--split { align-items: start; margin-top: 4px; }
+/* Hero logos in the outer lower corners, clear of both faces (his note) */
+.duo__logo { top: auto; bottom: 30%; left: auto; right: auto; margin: 0; transform: none; }
+.duo--evilos .duo__logo { left: 4vw; width: clamp(180px, 16vw, 340px); margin: 0; }
+.duo--parade .duo__logo { right: 4vw; width: clamp(160px, 14vw, 300px); margin: 0; }
+@media (max-width: 1199px) {
+  .duo__logo { bottom: auto; top: calc(var(--nav-h) + 3vh); }
+  .duo--evilos .duo__logo { left: 3vw; width: 17vw; }
+  .duo--parade .duo__logo { right: 3vw; width: 15vw; }
+}
+@media (max-width: 860px) {
+  .duo__logo { top: 31svh; }
+  .duo--evilos .duo__logo { left: 4vw; width: 30vw; }
+  .duo--parade .duo__logo { right: 4vw; width: 26vw; }
+}
+.small { margin-top: clamp(40px, 5vw, 64px); }
+.cards--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.small__text { margin-top: 10px; font-size: 0.94rem; }
+@media (max-width: 640px) { .cards--two { grid-template-columns: minmax(0, 1fr); } }
+
+/* Hero logos above the shade so they stay bright (they sat under it in the duo layer) */
+.hero__logos { position: absolute; inset: 0; pointer-events: none; }
+.hero__logo { position: absolute; bottom: 30%; height: auto; filter: drop-shadow(0 6px 18px #000); }
+.hero__logo--evilos { left: 4vw; width: clamp(180px, 16vw, 340px); }
+.hero__logo--parade { right: 4vw; width: clamp(160px, 14vw, 300px); }
+@media (max-width: 1199px) { .hero__logo { bottom: auto; top: calc(var(--nav-h) + 3vh); } .hero__logo--evilos { left: 3vw; width: 17vw; } .hero__logo--parade { right: 3vw; width: 15vw; } }
+@media (max-width: 860px) { .hero__logo { top: 31svh; } .hero__logo--evilos { left: 4vw; width: 30vw; } .hero__logo--parade { right: 4vw; width: 26vw; } }
+
+/* Hero logos about twice the size, capped by the room beside the centred text (2026-11-12 evening) */
+.hero--duo .hero__col { width: min(660px, 100%); }
+.hero--duo .hero__lead { max-width: 54ch; }
+.hero__logo { bottom: 27%; }
+.hero__logo--evilos { width: min(32vw, calc((100vw - 660px) / 2 - 7vw), 680px); }
+.hero__logo--parade { width: min(28vw, calc((100vw - 660px) / 2 - 7vw), 600px); }
+@media (max-width: 1199px) { .hero__logo--evilos { width: 24vw; } .hero__logo--parade { width: 21vw; } }
+@media (max-width: 860px) { .hero__logo--evilos { width: 40vw; } .hero__logo--parade { width: 36vw; } }

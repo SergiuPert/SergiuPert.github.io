@@ -75,22 +75,41 @@
     });
   }
 
-  // Screenshot viewer.
+  // The Dead Parade's trailer is a local video: it loads and plays only after a click, like the Evilos one.
+  const tdp = $('#tdp-trailer');
+  if (tdp) {
+    $('.trailer__btn', tdp).addEventListener('click', () => {
+      const v = document.createElement('video');
+      v.src = tdp.dataset.video;
+      v.controls = true;
+      v.autoplay = true;
+      v.playsInline = true;
+      v.setAttribute('aria-label', 'The Dead Parade trailer');
+      tdp.replaceChildren(v);
+      v.play().catch(() => {});
+    });
+  }
+
+  // Screenshot viewer. Each gallery pages through its own pictures.
   const box = $('#lightbox');
-  const shots = $$('#gallery a[data-full]');
-  if (box && box.showModal && shots.length) {
+  if (box && box.showModal) {
     const img = $('img', box);
+    let shots = [];
     let at = 0;
     const show = i => {
       at = (i + shots.length) % shots.length;
       img.src = shots[at].href;
       img.alt = $('img', shots[at]).alt;
     };
-    shots.forEach((a, i) => a.addEventListener('click', e => {
-      e.preventDefault();
-      show(i);
-      box.showModal();
-    }));
+    $$('.gallery').forEach(g => {
+      const list = $$('a[data-full]', g);
+      list.forEach((a, i) => a.addEventListener('click', e => {
+        e.preventDefault();
+        shots = list;
+        show(i);
+        box.showModal();
+      }));
+    });
     $('.lightbox__close', box).addEventListener('click', () => box.close());
     $('.lightbox__nav--prev', box).addEventListener('click', () => show(at - 1));
     $('.lightbox__nav--next', box).addEventListener('click', () => show(at + 1));
@@ -108,6 +127,28 @@
       startX = null;
     });
   }
+
+  // Animation studies: swap a clip for its breakdown copy (clip names and blend weights burned in) at the same moment.
+  $$('[data-breakdown-toggle]').forEach(btn => {
+    const v = $('video', btn.closest('.study'));
+    btn.addEventListener('click', () => {
+      const on = btn.getAttribute('aria-pressed') !== 'true';
+      const t = v.currentTime;
+      const playing = !v.paused;
+      v.src = on ? v.dataset.breakdown : v.dataset.main;
+      v.addEventListener('loadedmetadata', () => {
+        v.currentTime = t;
+        if (playing) v.play().catch(() => {});
+      }, { once: true });
+      btn.setAttribute('aria-pressed', String(on));
+      btn.textContent = on ? 'Hide breakdown' : 'Show breakdown';
+    });
+  });
+
+  // Only one study plays at a time.
+  $$('.study video').forEach(v => v.addEventListener('play', () => {
+    $$('.study video').forEach(o => { if (o !== v && !o.paused) o.pause(); });
+  }));
 
   // Embers drifting up over the hero art. Stops when the hero is off screen, and doesn't run at all for reduced motion.
   const canvas = $('#embers');

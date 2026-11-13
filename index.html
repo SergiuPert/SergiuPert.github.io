@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sergiu Pert | Unity Game Developer</title>
-  <meta name="description" content="Unity game developer with 5+ years of experience. Shipped mobile free-to-play games at SuperPlay and PocketFun, and built Evilos, a 2D tower defense, on my own.">
+  <title>Sergiu Pert | Game Developer</title>
+  <meta name="description" content="Game developer with 5+ years of experience. Building The Dead Parade, a 3D horde defense in Unreal Engine 5. Shipped mobile free-to-play games at SuperPlay and PocketFun, and built Evilos, a 2D tower defense, on my own.">
   <meta name="theme-color" content="#0c0a0b">
   <link rel="canonical" href="https://sergiupert.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sergiupert.github.io/">
-  <meta property="og:title" content="Sergiu Pert | Unity Game Developer">
-  <meta property="og:description" content="Shipped mobile free-to-play games at SuperPlay and PocketFun, and built Evilos, a 2D tower defense, on my own.">
+  <meta property="og:title" content="Sergiu Pert | Game Developer">
+  <meta property="og:description" content="Building The Dead Parade in Unreal Engine 5. Shipped mobile free-to-play games at SuperPlay and PocketFun, and built Evilos on my own.">
   <meta property="og:image" content="https://sergiupert.github.io/assets/img/og.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -18,6 +18,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preload" as="font" href="assets/fonts/poppins-latin-700-normal.woff2" type="font/woff2" crossorigin>
   <link rel="preload" as="image" href="assets/img/hero-wide.webp">
+  <link rel="preload" as="image" href="assets/tdp/hero-parade.webp">
   <link rel="stylesheet" href="css/site.css">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">
@@ -25,7 +26,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Sergiu Pert",
-    "jobTitle": "Unity Game Developer",
+    "jobTitle": "Game Developer",
     "url": "https://sergiupert.github.io/",
     "address": { "@type": "PostalAddress", "addressLocality": "Bucharest", "addressCountry": "RO" },
     "sameAs": ["https://www.linkedin.com/in/sergiu-pert-594817192/"]
@@ -39,6 +40,8 @@
   <header class="nav" id="nav">
     <a class="nav__brand" href="#top">Sergiu Pert</a>
     <nav class="nav__links" aria-label="Main">
+      <a href="#dead-parade">The Dead Parade</a>
+      <a href="animation.html">Animation</a>
       <a href="#evilos">Evilos</a>
       <a href="#work">Studio work</a>
       <a href="#build">How I build</a>
@@ -48,23 +51,27 @@
     <a class="btn btn--ghost btn--small" href="assets/Sergiu-Pert-CV.pdf" download>Download CV</a>
   </header>
 
-  <section class="hero" id="top">
-    <img class="hero__art" src="assets/img/hero-wide.webp" alt="" width="2400" height="863" fetchpriority="high">
+  <section class="hero hero--duo" id="top">
+    <div class="hero__duo" aria-hidden="true">
+      <figure class="duo duo--evilos"><img class="duo__art" src="assets/img/hero-wide.webp" alt="" width="2400" height="863" fetchpriority="high"></figure>
+      <figure class="duo duo--parade"><img class="duo__art" src="assets/tdp/hero-parade.webp" alt="" width="2400" height="1350" fetchpriority="high"></figure>
+    </div>
     <canvas class="hero__embers" id="embers" aria-hidden="true"></canvas>
     <div class="hero__shade"></div>
+    <div class="hero__logos" aria-hidden="true"><img class="hero__logo hero__logo--evilos" src="assets/img/logo-evilos.webp" alt="" width="760" height="310"><img class="hero__logo hero__logo--parade" src="assets/tdp/logo-parade.webp" alt="" width="520" height="266"></div>
     <div class="hero__inner">
       <div class="hero__col">
-        <p class="eyebrow">Unity Game Developer &middot; Bucharest</p>
-        <h1 class="hero__name">Sergiu<br>Pert</h1>
-        <p class="hero__lead">I make games in Unity and C#. I've shipped mobile free-to-play titles at SuperPlay and PocketFun, and I built Evilos, my 2D tower defense, on my own.</p>
+        <p class="eyebrow">Game Developer &middot; Unity &amp; Unreal &middot; Bucharest</p>
+        <h1 class="hero__name">Sergiu Pert</h1>
+        <p class="hero__lead">I make games in Unity and Unreal. I'm building The Dead Parade, a 3D horde defense in Unreal Engine 5, and I've shipped mobile free-to-play titles at SuperPlay and PocketFun, and Evilos, my 2D tower defense, on my own.</p>
         <div class="cta">
-          <a class="btn btn--fire" href="#evilos">See my work</a>
+          <a class="btn btn--fire" href="#dead-parade">See my work</a>
           <a class="btn btn--ghost" href="#contact">Get in touch</a>
         </div>
       </div>
     </div>
     <dl class="stats">
-      <div><dt>5+</dt><dd>years of experience</dd></div>
+      <div><dt>5</dt><dd>years of experience</dd></div>
       <div><dt>5</dt><dd>games shipped</dd></div>
       <div><dt>30,000</dt><dd>lines of C# in Evilos</dd></div>
       <div><dt>12</dt><dd>languages localized</dd></div>
@@ -73,15 +80,122 @@
 
   <main id="main">
 
-    <!-- EVILOS -->
-    <section class="section" id="evilos">
+    <!-- THE DEAD PARADE -->
+    <section class="section" id="dead-parade">
       <div class="wrap">
-        <div class="feature reveal">
+        <div class="reveal">
+          <p class="label">In development &middot; my own game &middot; Unreal Engine 5</p>
+        </div>
+        <div class="feature feature--tdp reveal">
           <div class="feature__text">
-            <p class="label">Featured project &middot; built solo</p>
+            <img class="feature__capsule" src="assets/tdp/capsule.webp" alt="The Dead Parade" width="1232" height="706" loading="lazy">
+            <h2 class="h2">Hold the line.</h2>
+            <p class="lede">An incremental horde defense for PC. Thousands of zombies walk the streets of a wartime Paris, and you hold them off with the soldiers you command, barbed wire, mines and air strikes. I design the game and lay out its levels, and I build it with Claude Code as an agentic coding partner, under a curated rules setup, testing every system in play and tuning it in the Unreal editor.</p>
+          </div>
+          <div class="feature__media">
+            <div class="trailer trailer--video" id="tdp-trailer" data-video="assets/tdp/trailer.mp4">
+              <button type="button" class="trailer__btn" aria-label="Play The Dead Parade trailer">
+                <img src="assets/tdp/trailer.webp" alt="" width="960" height="540" loading="lazy">
+                <span class="trailer__play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the trailer</span>
+              </button>
+            </div>
+            <ul class="facts">
+              <li><b>10,000</b> zombies in a battle</li>
+              <li><b>Unreal Engine 5.8</b></li>
+              <li><b>PC</b> &middot; Steam</li>
+            </ul>
+            <div class="cta">
+              <a class="btn btn--fire" href="animation.html">See the animation work</a>
+              <a class="btn btn--ghost" href="#tdp-shots">Screenshots</a>
+            </div>
+            <p class="status"><span class="dot dot--amber"></span>In development for Steam.</p>
+          </div>
+        </div>
+
+        <div class="arsenal">
+          <div class="reveal">
+            <h3 class="h3">In motion</h3>
+            <p class="muted">Battles played by the game's own simulation, then rendered offline with Movie Render Queue at the game's top settings.</p>
+          </div>
+          <div class="clips clips--3 reveal">
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/g05_ring_orbit.webp" data-src="assets/tdp/loops/g05_ring_orbit.mp4" width="1170" height="658" aria-label="The horde closing on a ring of soldiers around a supply drop"></video><figcaption>Holding the ring</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/action_parade.webp" data-src="assets/tdp/loops/action_parade.mp4" width="1170" height="658" aria-label="The horde walking down a street"></video><figcaption>The parade</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/action_wire.webp" data-src="assets/tdp/loops/action_wire.mp4" width="1170" height="658" aria-label="A soldier firing as zombies reach the barbed wire"></video><figcaption>At the wire</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/action_sniper.webp" data-src="assets/tdp/loops/action_sniper.mp4" width="1170" height="658" aria-label="A sniper's round bursting through a line of zombies, in slow motion"></video><figcaption>Sniper round</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/action_burn.webp" data-src="assets/tdp/loops/action_burn.mp4" width="1170" height="658" aria-label="A flamethrower burning zombies at night"></video><figcaption>Flamethrower</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/action_airstrike.webp" data-src="assets/tdp/loops/action_airstrike.mp4" width="1170" height="658" aria-label="An air strike exploding in the street"></video><figcaption>Air strike</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/g13_place_wire.webp" data-src="assets/tdp/loops/g13_place_wire.mp4" width="1170" height="658" aria-label="Placing barbed wire in the planning phase"></video><figcaption>Placing wire</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/g14_place_posts.webp" data-src="assets/tdp/loops/g14_place_posts.mp4" width="1170" height="658" aria-label="Placing a soldier on a balcony post in the planning phase"></video><figcaption>Balcony posts</figcaption></figure>
+            <figure class="clip"><video muted loop playsinline preload="none" poster="assets/tdp/loops/gt_tree.webp" data-src="assets/tdp/loops/gt_tree.mp4" width="1170" height="658" aria-label="Unlocking upgrades in the tree"></video><figcaption>Upgrade tree</figcaption></figure>
+          </div>
+          <p class="more reveal"><a href="animation.html">See the animation work up close &rarr;</a></p>
+        </div>
+
+        <ul class="gallery gallery--tdp reveal" id="tdp-shots">
+          <li class="gallery__big"><a href="assets/tdp/shots/loc3_field_strike_b_00015.webp" data-full><img src="assets/tdp/shots/loc3_field_strike_b_00015.webp" alt="Soldiers silhouetted against an air strike fireball in a burning field at night" width="1920" height="1080" loading="lazy"></a></li>
+          <li><a href="assets/tdp/shots/ss3_corner_strike_b_00038.webp" data-full><img src="assets/tdp/shots/ss3_corner_strike_b_00038-sm.webp" alt="Two soldiers seen from behind as air strike blasts throw sparks down a street with a tram" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/tdp/shots/ss3_hotel_m3_a.webp" data-full><img src="assets/tdp/shots/ss3_hotel_m3_a-sm.webp" alt="Top-down view of a flamethrower burning a path through the horde beside a supply drop's green flare" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/tdp/shots/ss3_church_m1_c_00007.webp" data-full><img src="assets/tdp/shots/ss3_church_m1_c_00007-sm.webp" alt="Soldiers firing into the dark by a church, lit by green flares" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/tdp/shots/ss3_corner_m3_a.webp" data-full><img src="assets/tdp/shots/ss3_corner_m3_a-sm.webp" alt="Soldiers fighting beside a derailed tram while red rings mark incoming air strike bombs" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/tdp/shots/loc2_canal_m1_a.webp" data-full><img src="assets/tdp/shots/loc2_canal_m1_a-sm.webp" alt="The firing line along a canal quay at night, a flamethrower lighting the horde" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/tdp/shots/loc4_market_plan2_p2.webp" data-full><img src="assets/tdp/shots/loc4_market_plan2_p2-sm.webp" alt="Planning phase in a market lane by day, barbed wire being placed" width="720" height="405" loading="lazy"></a></li>
+          <li class="gallery__wide"><a href="assets/tdp/shots/ss3_tree_take_00474.webp" data-full><img src="assets/tdp/shots/ss3_tree_take_00474-sm.webp" alt="The upgrade tree, seen whole" width="720" height="405" loading="lazy"></a></li>
+        </ul>
+
+        <div class="under">
+          <div class="reveal">
+            <h3 class="h3">Under the hood</h3>
+            <p class="muted">A few of the systems behind it.</p>
+          </div>
+          <div class="specs">
+            <article class="spec reveal">
+              <p class="spec__key">10,000 zombies on the GPU</p>
+              <p>Animation baked into textures plays on instanced meshes, so every zombie has its own clip, phase, colour and scale without a skeleton of its own.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">Deterministic battles</p>
+              <p>A fixed-step simulation: the same orders and seed give the same battle, bit for bit, so any battle can be replayed and filmed offline.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">A flow-field horde</p>
+              <p>The horde routes by a flow field. Zombies crowd and jam, and break barbed wire or walk around it, whichever costs them less.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">Soldiers you command</p>
+              <p>Each soldier finds his own path with A* over the same walkable grid the horde's flow field uses, only targets what his bullet can reach, and keeps his own aim and rate of fire.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">Footage from code</p>
+              <p>The trailer and store loops are filmed by Movie Render Queue driven from code, with scripted cameras and every texture checked as loaded in every frame.</p>
+            </article>
+            <article class="spec reveal">
+              <p class="spec__key">AI-assisted development</p>
+              <p>I build it with Claude Code as an agentic coding partner, under a curated rules setup. I design each system, test it in play and tune it in the editor.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVILOS -->
+    <section class="section section--alt" id="evilos">
+      <div class="wrap">
+        <div class="reveal">
+          <p class="label">Featured project &middot; built solo</p>
+        </div>
+        <div class="feature feature--split reveal">
+          <div class="feature__text">
             <img class="feature__logo" src="assets/img/logo-evilos.webp" alt="Evilos" width="760" height="310" loading="lazy">
             <h2 class="h2">You are the final boss.</h2>
             <p class="lede">A 2D tower defense where the player is the evil overlord, defending against waves of heroes across 10 acts. I designed and built the entire game: gameplay, enemy AI, UI/UX, economy and LiveOps.</p>
+          </div>
+          <div class="feature__media">
+            <div class="trailer" id="trailer" data-yt="-QNmPf43Bdo">
+              <button type="button" class="trailer__btn" aria-label="Play the Evilos trailer">
+                <img src="assets/img/trailer-poster.webp" alt="" width="1280" height="720" loading="lazy">
+                <span class="trailer__play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the trailer</span>
+              </button>
+            </div>
             <ul class="facts">
               <li><b>100</b> levels</li>
               <li><b>24</b> evolvable weapons and spells</li>
@@ -94,22 +208,7 @@
             </div>
             <p class="status"><span class="dot"></span>Live on Google Play. Steam release on 14 Dec 2026.</p>
           </div>
-          <div class="trailer" id="trailer" data-yt="-QNmPf43Bdo">
-            <button type="button" class="trailer__btn" aria-label="Play the Evilos trailer">
-              <img src="assets/img/trailer-poster.webp" alt="" width="1280" height="720" loading="lazy">
-              <span class="trailer__play"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg>Watch the trailer</span>
-            </button>
-          </div>
         </div>
-
-        <ul class="gallery reveal" id="gallery">
-          <li class="gallery__big"><a href="assets/img/evilos-1.webp" data-full><img src="assets/img/evilos-1-sm.webp" alt="Armoured heroes marching on the sorcerer's magic shield in a burning hall" width="960" height="540" loading="lazy"></a></li>
-          <li><a href="assets/img/evilos-2.webp" data-full><img src="assets/img/evilos-2-sm.webp" alt="A golden explosion and damage numbers in a forest level" width="720" height="405" loading="lazy"></a></li>
-          <li><a href="assets/img/evilos-3.webp" data-full><img src="assets/img/evilos-3-sm.webp" alt="Purple lightning tearing through ghosts in a blue hall" width="720" height="405" loading="lazy"></a></li>
-          <li><a href="assets/img/evilos-4.webp" data-full><img src="assets/img/evilos-4-sm.webp" alt="A frost blast filling the screen in a village level" width="720" height="405" loading="lazy"></a></li>
-          <li><a href="assets/img/evilos-5.webp" data-full><img src="assets/img/evilos-5-sm.webp" alt="A burning beam and a black hole spell against heroes at night" width="720" height="405" loading="lazy"></a></li>
-          <li><a href="assets/img/evilos-6.webp" data-full><img src="assets/img/evilos-6-sm.webp" alt="A purple vortex spell in a dark hall" width="720" height="405" loading="lazy"></a></li>
-        </ul>
 
         <div class="arsenal">
           <div class="reveal">
@@ -128,6 +227,15 @@
             <li><b>Daily loop</b><span>Daily quests, daily rewards and 75 achievements.</span></li>
           </ul>
         </div>
+
+        <ul class="gallery reveal" id="gallery">
+          <li class="gallery__big"><a href="assets/img/evilos-1.webp" data-full><img src="assets/img/evilos-1-sm.webp" alt="Armoured heroes marching on the sorcerer's magic shield in a burning hall" width="960" height="540" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-2.webp" data-full><img src="assets/img/evilos-2-sm.webp" alt="A golden explosion and damage numbers in a forest level" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-3.webp" data-full><img src="assets/img/evilos-3-sm.webp" alt="Purple lightning tearing through ghosts in a blue hall" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-4.webp" data-full><img src="assets/img/evilos-4-sm.webp" alt="A frost blast filling the screen in a village level" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-5.webp" data-full><img src="assets/img/evilos-5-sm.webp" alt="A burning beam and a black hole spell against heroes at night" width="720" height="405" loading="lazy"></a></li>
+          <li><a href="assets/img/evilos-6.webp" data-full><img src="assets/img/evilos-6-sm.webp" alt="A purple vortex spell in a dark hall" width="720" height="405" loading="lazy"></a></li>
+        </ul>
 
         <div class="under">
           <div class="reveal">
@@ -176,7 +284,7 @@
     </section>
 
     <!-- STUDIO WORK -->
-    <section class="section section--alt" id="work">
+    <section class="section" id="work">
       <div class="wrap">
         <div class="reveal">
           <p class="label">Studio work</p>
@@ -235,22 +343,40 @@
             </ul>
           </article>
         </div>
+
+        <div class="small reveal">
+          <h3 class="h3">Small projects</h3>
+          <div class="cards cards--two">
+            <article class="card">
+              <h4 class="h4">Echoes of the Masked King</h4>
+              <p class="card__sub">Global Game Jam 2026 &middot; two days &middot; a team of two</p>
+              <p class="muted small__text">A game made in two days by a team of two at Global Game Jam 2026.</p>
+              <p class="links"><a href="https://mololo.itch.io/echoes-of-the-masked-king" target="_blank" rel="noopener">Play on itch.io</a></p>
+            </article>
+            <article class="card">
+              <h4 class="h4">Dungeon Crawl</h4>
+              <p class="card__sub">Codecool team project &middot; four days</p>
+              <p class="muted small__text">A four-day team project at Codecool, built in Unity without a template. It plays in the browser.</p>
+              <p class="links"><a href="https://play.unity.com/en/games/0bee30e7-7561-4ae2-bbf3-65bf0fe76c1b/dungeon-crawl-v02" target="_blank" rel="noopener">Play on Unity Play</a></p>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- HOW I BUILD -->
-    <section class="section" id="build">
+    <section class="section section--alt" id="build">
       <div class="wrap">
         <div class="reveal">
           <p class="label">How I build</p>
           <h2 class="h2">Faster with AI.<br>Every change still reviewed.</h2>
-          <p class="lede">I build with Claude Code as an agentic coding partner, under a curated rules setup, and I review every change and check it with on-device tests. That's how I run Evilos and how I built Game Marketing Hub.</p>
+          <p class="lede">I build with Claude Code as an agentic coding partner, under a curated rules setup, and I review every change and check it with automated tests. That's how I run Evilos and The Dead Parade, and how I built Game Marketing Hub.</p>
         </div>
         <ol class="flow reveal">
           <li><b>Rules first</b><span>A curated rules file and 10 context docs keep the agent on the project's standards.</span></li>
           <li><b>Build</b><span>Claude Code works through the task as a coding partner.</span></li>
           <li><b>Review</b><span>I review every change.</span></li>
-          <li><b>Test</b><span>About 60 on-device regression tests check it, with real taps and save snapshots.</span></li>
+          <li><b>Test</b><span>Automated tests check it: about 60 on-device regression tests in Evilos, headless simulation tests in The Dead Parade.</span></li>
           <li><b>Approve</b><span>Live deploys and store writes wait for my approval.</span></li>
         </ol>
         <div class="split">
@@ -269,7 +395,7 @@
     </section>
 
     <!-- SKILLS -->
-    <section class="section section--alt" id="skills">
+    <section class="section" id="skills">
       <div class="wrap">
         <div class="reveal">
           <p class="label">Skills</p>
@@ -277,6 +403,7 @@
         </div>
         <div class="skills reveal">
           <div><h3>Unity &amp; gameplay</h3><ul><li>Unity Engine</li><li>C#</li><li>Gameplay Programming</li><li>Enemy AI &amp; Difficulty Systems</li><li>UI/UX</li><li>Animation/VFX</li></ul></div>
+          <div><h3>Unreal Engine 5 (AI-assisted)</h3><ul><li>Animation Blueprints &amp; IK</li><li>Retargeting</li><li>Vertex Animation Textures</li><li>Movie Render Queue</li></ul></div>
           <div><h3>LiveOps &amp; monetization</h3><ul><li>Remote Config</li><li>Addressables &amp; CDN</li><li>Unity Gaming Services</li><li>Cloud Save</li><li>Free-to-Play Monetization</li><li>IAP &amp; Ads</li></ul></div>
           <div><h3>Performance &amp; platforms</h3><ul><li>Performance &amp; Memory Optimization</li><li>Android</li><li>iOS</li><li>Steam / PC</li><li>Localization</li></ul></div>
           <div><h3>C# / .NET</h3><ul><li>Serverless C# (.NET 6, Cloud Code)</li><li>ASP.NET Core</li><li>EF Core</li><li>SQL Server</li></ul></div>
@@ -287,7 +414,7 @@
     </section>
 
     <!-- ABOUT -->
-    <section class="section" id="about">
+    <section class="section section--alt" id="about">
       <div class="wrap about">
         <div class="about__photo reveal">
           <img src="assets/img/portrait.webp" alt="Sergiu Pert" width="900" height="900" loading="lazy">
@@ -295,9 +422,10 @@
         <div class="reveal">
           <p class="label">About</p>
           <h2 class="h2">Hi, I'm Sergiu.</h2>
-          <p class="lede">The thing that brings me the most satisfaction is seeing people enjoy my creations. I've shipped titles in-studio, for clients and solo, and I'm strongest in gameplay, LiveOps systems, IAP and ads, and performance.</p>
-          <p class="muted">I'm open to Unity and C#/.NET roles, full-time or contract, fully remote or hybrid in Bucharest.</p>
+          <p class="lede">The thing that brings me the most satisfaction is seeing people enjoy my creations. I've shipped titles in-studio, for clients and solo, and I'm strongest in gameplay, LiveOps systems, IAP and ads, and performance. Right now I'm building The Dead Parade, a 3D horde defense in Unreal Engine 5.</p>
+          <p class="muted">I'm open to game development and C#/.NET roles, full-time or contract, fully remote or hybrid in Bucharest.</p>
           <ol class="path">
+            <li><time>Aug 2026 &ndash; now</time><div><b>The Dead Parade</b><span>My own game, in Unreal Engine 5 since Sep 2026</span></div></li>
             <li><time>2023 &ndash; now</time><div><b>Evilos</b><span>Independent Game Developer</span></div></li>
             <li><time>Jul 2025 &ndash; Jun 2026</time><div><b>SuperPlay</b><span>Mid Unity Developer, MTX department</span></div></li>
             <li><time>Apr 2023 &ndash; Jun 2025</time><div><b>PocketFun</b><span>Unity Game Developer</span></div></li>
@@ -311,7 +439,7 @@
     <section class="contact" id="contact">
       <img class="contact__art" src="assets/img/campaign.webp" alt="" width="2000" height="571" loading="lazy">
       <div class="wrap contact__inner reveal">
-        <h2 class="contact__title">Looking for a Unity developer?</h2>
+        <h2 class="contact__title">Looking for a developer?</h2>
         <p class="lede">Send me a message and I'll get back to you.</p>
         <p class="contact__mail" data-email-text></p>
         <div class="cta cta--center">
